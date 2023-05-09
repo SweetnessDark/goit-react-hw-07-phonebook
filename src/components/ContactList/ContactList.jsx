@@ -29,7 +29,10 @@ export const ContactList = () => {
             <ContactsItem key={id}>
               <Name>{name}</Name>
               <Number>{phone}</Number>
-              <DelBtn type="button" onClick={() => dispatch(deleteContact(id))}>
+              <DelBtn
+                type="button"
+                onClick={() => dispatch(deleteContact({ contactsId: id }))}
+              >
                 Delete
               </DelBtn>
             </ContactsItem>
